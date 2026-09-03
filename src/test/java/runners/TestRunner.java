@@ -21,7 +21,7 @@ import utilities.LoggerHelper;
 
         publish = true,
 
-        tags="@allow",
+        tags="@backup",
 
         dryRun = false
 )
