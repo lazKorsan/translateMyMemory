@@ -3,7 +3,9 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import utilities.ConfigWriter;
+import utilities.FileBackupService;
 import utilities.GoogleTranslateService;
+import utilities.QuizService;
 
 public class TranslateStepDefs {
 
@@ -70,5 +72,15 @@ public class TranslateStepDefs {
     public void userSavesWordAndItsTranslationToConfigProperties(String word) {
         String formattedKey = word.toLowerCase().replace(" ", "_");
         ConfigWriter.setProperty(formattedKey, translatedText);
+    }
+
+    @Given("User creates a {int} question quiz")
+    public void userCreatesAQuestionQuiz(int count) {
+        QuizService.generateQuiz(count);
+    }
+
+    @Given("User backups vocabulary from config to documents folder and clears config")
+    public void userBackupsVocabularyFromConfigToDocumentsFolderAndClearsConfig() {
+        FileBackupService.backupAndClearConfig();
     }
 }
