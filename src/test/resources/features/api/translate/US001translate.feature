@@ -14,5 +14,5 @@ Feature: Google Translate API Integration
 
 @allow
   Scenario: Translate words and save to config properties
-    Given User translates "amend" to "tr" language via API
-    Then User saves word "amend" and its translation to config properties
+    Given User translates "upstream branch" to "tr" language via API
+    Then User saves word "upstream branch" and its translation to config properties
