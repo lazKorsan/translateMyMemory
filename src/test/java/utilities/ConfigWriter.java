@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
+import static java.awt.Color.green;
+import static stepdefinitions.TranslateStepDefs.green;
+import static stepdefinitions.TranslateStepDefs.redBold;
+
 
 public class ConfigWriter {
 
@@ -30,6 +34,7 @@ public class ConfigWriter {
         try (OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(FILE_PATH), "UTF-8")) {
             properties.store(osw, "Updated via MyMemory API with UTF-8");
             System.out.println("Başarıyla yazıldı -> " + key + " = " + value);
+            System.out.println(green("Başarıyla yazıldı -> ")+ redBold(key + " = " + value));
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("Properties dosyasına yazılamadı!");
