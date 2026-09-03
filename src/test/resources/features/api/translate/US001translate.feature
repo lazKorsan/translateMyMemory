@@ -1,4 +1,4 @@
-Feature: Google Translate API Integration
+Feature: MyMemory Translate API Integration
 
   @translate
   Scenario Outline: Translate words and save to config properties
@@ -14,5 +14,5 @@ Feature: Google Translate API Integration
 
 @allow
   Scenario: Translate words and save to config properties
-    Given User translates "upstream branch" to "tr" language via API
-    Then User saves word "upstream branch" and its translation to config properties
+    Given User translates "mystry" to "tr" language via API
+    Then User saves word "mystry" and its translation to config properties
