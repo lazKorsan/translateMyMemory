@@ -21,7 +21,7 @@ import utilities.LoggerHelper;
 
         publish = true,
 
-        tags="@singleTranslate",
+        tags="@oneStep",
 
         dryRun = false
 )
