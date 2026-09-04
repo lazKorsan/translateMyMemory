@@ -19,6 +19,7 @@ import utilities.LoggerHelper;
         features = {"src/test/resources/features/api"},
         glue = {"stepdefinitions","hooks","utilities"},
 
+
         publish = true,
 
         tags="@manyTranslate",

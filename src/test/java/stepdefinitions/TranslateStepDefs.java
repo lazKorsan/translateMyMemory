@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import utilities.ConfigWriter;
 import utilities.FileBackupService;
 import utilities.GoogleTranslateService;
@@ -82,5 +83,23 @@ public class TranslateStepDefs {
     @Given("User backups vocabulary from config to documents folder and clears config")
     public void userBackupsVocabularyFromConfigToDocumentsFolderAndClearsConfig() {
         FileBackupService.backupAndClearConfig();
+    }
+
+
+
+    @When("translate {string} to {string}")
+    public void translateTo(String word, String targetLang) throws InterruptedException {
+
+        Thread.sleep(1500);
+
+        translatedText = GoogleTranslateService.translate(word, targetLang);
+
+
+        System.out.println( greenBold("Orijinal Metin: ")  +redBold(word)+ greenBold(" ---> Çeviri: ") +redBold(translatedText));
+
+        String formattedKey = word.toLowerCase().replace(" ", "_");
+        ConfigWriter.setProperty(formattedKey, translatedText);
+
+
     }
 }
