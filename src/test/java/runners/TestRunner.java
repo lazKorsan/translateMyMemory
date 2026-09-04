@@ -22,7 +22,7 @@ import utilities.LoggerHelper;
 
         publish = true,
 
-        tags="@manyTranslate",
+
 
         dryRun = false
 )
