@@ -6,4 +6,4 @@ Feature: Vocabulary Quiz Generator
 
     Examples:
       | question_count |
-      | 5              |
+      | 10             |
