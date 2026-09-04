@@ -21,13 +21,14 @@ import utilities.LoggerHelper;
 
         publish = true,
 
-        tags="@manyTranslate",
+        tags="@singleTranslate",
 
         dryRun = false
 )
-public class TestRunner {
+public class SingletranslateRunner {
 
-        public static LoggerHelper logger = new LoggerHelper();
+
+    public static LoggerHelper logger = new LoggerHelper();
     /*
         Allure Report Oluşturma Adımları:
         1- Testleri çalıştırın (Runner veya 'mvn clean test')
