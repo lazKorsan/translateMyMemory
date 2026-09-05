@@ -1,7 +1,7 @@
 Feature:
   @singleTrasnslate
   Scenario:
-    * translate "artifact" to "tr"
+    * translate "casual" to "tr"
 
 
 
