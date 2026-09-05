@@ -1,7 +1,7 @@
 Feature:
   @singleTrasnslate
   Scenario:
-    * translate "nose" to "tr"
+    * translate "initial" to "tr"
 
 
 
@@ -15,13 +15,22 @@ Feature:
 
   @moreThenOne
   Scenario:
-    * translate "dad" to "tr"
+    * translate "evidence notice" to "tr"
 
 
 
-@multiTranslate
+  @multiTranslate
   Scenario:
     * translate "nose" to "tr"
+    * translate "cheeks" to "tr"
+    * translate "chin" to "tr"
+    * translate "tummy" to "tr"
+    * translate "toes" to "tr"
+
+
+
+  Scenario:
+    * translate "introduce" to "tr"
     * translate "cheeks" to "tr"
     * translate "chin" to "tr"
     * translate "tummy" to "tr"
